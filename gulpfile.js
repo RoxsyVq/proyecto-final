@@ -10,7 +10,8 @@ var minifyCSS = require('gulp-minify-css');
 
 gulp.task('script', function(cb){
 	return gulp.src('./node_modules/bootstrap/dist/js/bootstrap.js')
-    .pipe(gulp.dest('./src/js'))
+    .pipe(gulp.dest('./src/js'));
+    .pipe(gulp.dest('./dist/js'))
 });
 
 gulp.task('style', function() {
@@ -19,7 +20,8 @@ gulp.task('style', function() {
 });
 gulp.task('sass', function() {
 	return gulp.src('./src/sass/main.scss')
-    .pipe(gulp.dest('./src/css/main.css'))
+    .pipe(gulp.dest('./src/css/style.css'))
+    .pipe(gulp.dest('./dist/css/style.css'))
 });
 gulp.task('jquery', function() {
 	return gulp.src('./node_modules/jquery/dist/jquery.js')
@@ -36,6 +38,10 @@ gulp.task('select-js', function() {
 
 gulp.task('images', function() {
 	// tarea images
+});
+gulp.task('index', function() {
+	return gulp.src('./index.html')
+    .pipe(gulp.dest('./dist/index.html'))
 });
 
 

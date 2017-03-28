@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+	<title>Examen Herramientas Productividad</title>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+       <link rel="stylesheet" href="src/css/style.css">
+   
+   
+	
+	<!--REQUIRED STYLE SHEETS-->
+</head>
+<body onload="init()">
+	<div id="map" style="height:100%; "></div>
+	<div class="navbar navbar-inverse navbar-fixed-top">
+		<div class="container">
+		<span><img src="docs/logo-gris.jpg" alt=""></span>
+		<span><a tabindex="0" class="glyphicon glyphicon-info-sign pull-right" role="" data-toggle="popover" data-trigger="focus" title="Corrocomp!" data-content="And here's some amazing content. It's very engaging. Right?"></a></span>
+		
+		</div>
+	</div><!--END NAV SECTION -->
+	<div id="home-sec">   
+		<div class="container"  >
+		
+		</div>
+	</div><!--END HOME SECTION-->  
+	<section id="info"  >
+		<div class="container">
+		<div class="row">
+		<div class="col-md-5">
+		    <h3>ORIGEN</h3>
+		    <div class="dropdown">
+                  <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+                    Selecione
+                    <span class="caret"></span>
+                  </button>
+                  <ul class="dropdown-menu"  id="list_ciu" aria-labelledby="dropdownMenu1">
+                       <li id="Arica"><a href="#">Arica</a></li>
+                       <li id="iqui"><a href="#">Iquique</a></li>
+                      <li id="Anto"><a href="#">Antofagasta</a></li>
+                      <li id="serena"><a href="#">La serena</a></li>
+                      <li id="valpa"><a href="#">Valparaiso</a></li>
+
+                    
+                    
+                  </ul>
+                </div>
+            <h3>DESTINO</h3>
+		    <select >
+                  <option>Arica</option>
+                  <option>Iquique</option>
+                  <option>Antofagasta</option>
+                  <option>La serena</option>
+                  <option>Valparaiso</option>
+                </select> <br> <br>
+             
+		</div>
+		 
+		</div>
+		<div class="row">
+		     <button id="buscar">Buscar</button> 
+		</div>
+		</div>
+	</section><!--END ABOUT SECTION-->
+	<section id="calculator" >
+		<div class="container">
+        <div class="col-md-6 col-xs-6">
+		    <h3>VEHICULO SELECIONADO</h3>
+                Seleciones:
+            <div class="row">
+                <div class="col-md-1 col-xs-1">
+                    <input type="radio" name="" id="moto">
+                </div>
+                <div class="col-md-2 col-xs-3">
+                    <img src="docs/moto.jpg" alt="">
+                </div>
+                <div class="col-md-4 col-xs-5">
+                    <p>Motocicleta</p>
+                    <smal>maximo 2 pasajeros</smal>
+                </div>
+                <div class="col-md-2 col-xs-3">
+                    <span>$ 3680</span>
+                </div>
+		    </div>
+		    <div class="row">
+                <div class="col-md-1 col-xs-1 ">
+                    <input type="radio" name="" id="auto">
+                </div>
+                <div class="col-md-2 col-xs-3 ">
+                    <img src="docs/auto.jpg" alt="">
+                </div>
+                <div class="col-md-4 col-xs-5 ">
+                    <p>Automovil</p>
+                    <smal>maximo 5 pasajeros</smal>
+                </div>
+                <div class="col-md-2 col-xs-3 ">
+                    <span>$ 3680</span>
+                </div>
+		    </div>
+		    <div class="row">
+                <div class="col-md-1 col-xs-1 col-sm-1">
+                    <input type="radio" name="" id="mini">
+                </div>
+                <div class="col-md-2 col-xs-3 col-sm-3">
+                    <img src="docs/van.jpg" alt="">
+                </div>
+                <div class="col-md-4 col-xs-5 col-sm-5">
+                    <p>Minivan</p>
+                    <smal>maximo 10 pasajeros</smal>
+                </div>
+                <div class="col-md-2 col-xs-3 col-sm-3">
+                    <span>$ 4890</span>
+                </div>
+		    </div>
+		    <div class="row">
+                <div class="col-md-1 col-xs-1 col-sm-1">
+                    <input type="radio" name="" id="camion">
+                </div>
+                <div class="col-md-2 col-xs-3 col-sm-3">
+                    <img src="docs/camion.jpg" alt="">
+                </div>
+                <div class="col-md-4 col-xs-5 col-sm-5">
+                    <p>Camion</p>
+                    <smal>maximo 3 pasajeros</smal>
+                </div>
+                <div class="col-md-2 col-xs-3 col-sm-3">
+                    <span>$ 3680</span>
+                </div>
+		    </div>
+		    <div class="row">
+		        <label for="">Cantidad de pasajeros <input type="text" placeholder="6"></label>
+		    </div>
+		   <div class="row">
+		        <button id="compartir">compartir carro!</button>
+		    </div> 
+		</div>
+		
+</div>
+	</section><!--END PROJECT SECTION-->
+	<div id="footer">
+		2014 www.yourdomain.com | All Right Reserved  
+	</div><!-- END FOOTER SECTION -->
+	
+  <script src="src/js/map.js" type="text/javascript"></script>
+ 
+	<script src="src/js/ciudades.js"></script>
+	<script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCPN_e3ZKJr3yeU1vzUT5Bo1Ik6W3axZMQ&callback=initMap"></script>
+	 <script
+      src="https://code.jquery.com/jquery-3.2.1.js"
+      integrity="sha256-DZAnKJ/6XZ9si04Hgrsxu/8s717jcIzLy3oi35EouyE="
+      crossorigin="anonymous"></script>
+       <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+</body>
+</html>
