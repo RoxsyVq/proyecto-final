@@ -115,7 +115,7 @@ $(document).ready(creacionCity);
 //guardar los datos en local storage
 function postDatos(){
    
-	var lis=$('.lis');
+	var lis=$('.lisini');
 	$.each(lis, function() {
         $(this).on('click',cityClick)
     });
