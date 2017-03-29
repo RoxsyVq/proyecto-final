@@ -6,12 +6,13 @@
 	<title>Examen Herramientas Productividad</title>
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
        <link rel="stylesheet" href="src/css/style.css">
+       <link rel="stylesheet" type="text/css" href="src/alert/sweetalert.css">
    
    
 	
 	<!--REQUIRED STYLE SHEETS-->
 </head>
-<body onload="init()">
+<body >
 	<div id="map" style="height:100%; "></div>
 	<div class="navbar navbar-inverse navbar-fixed-top">
 		<div class="container">
@@ -30,7 +31,8 @@
 		<div class="row">
 		<div class="col-md-5">
 		    <h3>ORIGEN</h3>
-		    <select id="lista-ciudades" >
+		    <select  class="select" id="start" onchange="calcRoute();" >
+                 Seleciona
                   <option>Arica</option>
                   <option>Iquique</option>
                   <option>Antofagasta</option>
@@ -41,7 +43,7 @@
                 
                 
             <h3>DESTINO</h3>
-		    <select >
+		    <select class="select" id="end" onchange="calcRoute();">
                   <option>Arica</option>
                   <option>Iquique</option>
                   <option>Antofagasta</option>
@@ -62,9 +64,9 @@
         <div class="col-md-6 col-xs-6">
 		    <h3>VEHICULO SELECIONADO</h3>
                 Seleciones:
-            <div class="row">
+            <div class="row" id="moto">
                 <div class="col-md-1 col-xs-1">
-                    <input type="radio" name="" id="moto">
+                    <input type="radio" name="radio" id="radio">
                 </div>
                 <div class="col-md-2 col-xs-3">
                     <img src="docs/moto.jpg" alt="">
@@ -77,7 +79,7 @@
                     <span>$ 3680</span>
                 </div>
 		    </div>
-		    <div class="row">
+		    <div class="row" id="auto">
                 <div class="col-md-1 col-xs-1 ">
                     <input type="radio" name="" id="auto">
                 </div>
@@ -92,7 +94,7 @@
                     <span>$ 3680</span>
                 </div>
 		    </div>
-		    <div class="row">
+		    <div class="row" id="mini">
                 <div class="col-md-1 col-xs-1 col-sm-1">
                     <input type="radio" name="" id="mini">
                 </div>
@@ -107,7 +109,7 @@
                     <span>$ 4890</span>
                 </div>
 		    </div>
-		    <div class="row">
+		    <div class="row" id="camion">
                 <div class="col-md-1 col-xs-1 col-sm-1">
                     <input type="radio" name="" id="camion">
                 </div>
@@ -135,15 +137,14 @@
 	<div id="footer">
 		2014 www.yourdomain.com | All Right Reserved  
 	</div><!-- END FOOTER SECTION -->
-	
+	<script src="src/alert/sweetalert.min.js"></script>
+	<script src="src/js/jquery.min.js"></script>
+	<script src="src/js/moto.js"></script>
   <script src="src/js/map.js" type="text/javascript"></script>
  
 	<script src="src/js/ciudades.js"></script>
 	<script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCPN_e3ZKJr3yeU1vzUT5Bo1Ik6W3axZMQ&callback=initMap"></script>
-	 <script
-      src="https://code.jquery.com/jquery-3.2.1.js"
-      integrity="sha256-DZAnKJ/6XZ9si04Hgrsxu/8s717jcIzLy3oi35EouyE="
-      crossorigin="anonymous"></script>
+	 
        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
 </body>
 </html>

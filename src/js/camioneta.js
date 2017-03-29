@@ -1,7 +1,11 @@
-function Camioneta(){
-	this.litrosGastados = function(distancia){
-		var max=5;
-        var consu=6;
-        
-	}
-}
+$(document).ready(function(){  
+  
+    $("#camion").click(function() {  
+        if($("#camion").is(':checked')) {  
+            alert("Has elegido una Camioneta");  
+        } else {  
+            alert("No has elegido aun");  
+        }  
+    });  
+  
+});
