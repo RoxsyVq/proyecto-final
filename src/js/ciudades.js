@@ -113,15 +113,32 @@ $(document).ready(creacionCity);
    	
 }
 //guardar los datos en local storage
-function postDatos(){
+function postDatosinic(){
    
 	var lis=$('.lisini');
 	$.each(lis, function() {
-        $(this).on('click',cityClick)
+        $(this).on('click',cityInicio)
     });
 
 }
-function cityClick(event){
+function cityInicio(event){
+  
+	select=true;
+	var name= $(event.currentTarget).find('.name').text();
+	var distancia= $(event.currentTarget).find('.distan').text();
+	localStorage.setItem('name',name);
+	localStorage.setItem('distancia',distancia);
+	
+}
+function postDatosfin(){
+   
+	var lis=$('.lisfin');
+	$.each(lis, function() {
+        $(this).on('click',cityFin)
+    });
+
+}
+function cityInicio(event){
   
 	select=true;
 	var name= $(event.currentTarget).find('.name').text();
@@ -149,7 +166,7 @@ function valButon(){
 	
 }
 
-function calcularkil(){
+function calcularkillometros(){
     var one = $('#start').ciud[i].distance ;
     var two = $('#end').ciud[i].distance ;
     var totalkil = one + two;

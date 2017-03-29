@@ -51,4 +51,7 @@ section#calculator {
 .visible {
   opacity: 1; }
 
+.distan {
+  opacity: 0; }
+
 /*# sourceMappingURL=style.css.map */
